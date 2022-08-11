@@ -1,0 +1,110 @@
+$white: #fff;
+$black: #333;
+$orange: #ffa500;
+$lightergray: #d5d5d5;
+$lightgray: #f0f3f1;
+$gray: #e3dddd;
+$text: #888;
+$button: #3e3e3f;
+$button-hover: #565657;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: $black;
+  background-image: url('../public/assets/img/rider.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Aeonis', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+  margin: 0 auto;
+  max-width: 1400px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main {
+  min-height: 85vh;
+  background-color: rgb(228, 231, 235, 0.8);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  @media (max-width: 600px) {
+    padding: 0.5rem;
+  }
+}
+
+.no-product-message {
+  font-style: italic;
+  font-size: 2rem;
+  padding-top: 2.5rem;
+}
+
+.footer {
+  height: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(106, 120, 131, 0.8);
+  padding: 0 1.5rem;
+
+  .footer__data {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    font-size: 1.1rem;
+    color: $white;
+  }
+
+  .github {
+    text-decoration: none;
+    color: $orange;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  .rss-logo {
+    width: 5rem;
+    height: 4rem;
+
+    background-image: url('../public/assets/svg/rss-logo.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.6s ease-in-out;
+
+    &:hover {
+      filter: invert(70%) sepia(72%) saturate(1000%) hue-rotate(358deg) brightness(160%) contrast(80%);
+    }
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+  transform: 0.3s;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(106, 120, 131, 0.5);
+  cursor: pointer;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(106, 120, 131, 0.6);
+}

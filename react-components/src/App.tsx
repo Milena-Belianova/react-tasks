@@ -10,6 +10,7 @@ function App() {
         <Header showCartCount={true} cartCount={0} />
         <Main />
         <Footer />
+        
       </body>
     </div>
   );
