@@ -1,15 +1,15 @@
-const kalkEbb = '../../public/assets/img/kalk-ebb.jpg';
-const kalkInk = '../../public/assets/img/kalk-ink.jpg';
-const kalkOr = '../../public/assets/img/kalk-or.jpg';
-const surGreen = '../../public/assets/img/surron-x-green.jpg';
-const surGray = '../../public/assets/img/surron-x-gray.jpg';
-const surBlue = '../../public/assets/img/surron-x-blue.jpg';
-const surRed = '../../public/assets/img/surron-x-red.jpg';
-const surYellow = '../../public/assets/img/surron-x-yellow.jpg';
-const surBlack = '../../public/assets/img/surron-x-black.jpg';
-const segRed = '../../public/assets/img/x160-red.png';
-const segBlue = '../../public/assets/img/x260-blue.png';
-const talaria = '../../public/assets/img/talaria-sting-off-road.jpg';
+const kalkEbb = './assets/img/kalk-ebb.jpg';
+const kalkInk = './assets/img/kalk-ink.jpg';
+const kalkOr = './assets/img/kalk-or.jpg';
+const surGreen = './assets/img/surron-x-green.jpg';
+const surGray = './assets/img/surron-x-gray.jpg';
+const surBlue = './assets/img/surron-x-blue.jpg';
+const surRed = './assets/img/surron-x-red.jpg';
+const surYellow = './assets/img/surron-x-yellow.jpg';
+const surBlack = './assets/img/surron-x-black.jpg';
+const segRed = './assets/img/x160-red.png';
+const segBlue = './assets/img/x260-blue.png';
+const talaria = './assets/img/talaria-sting-off-road.jpg';
 
 export type Product = {
   imgUrl: string;

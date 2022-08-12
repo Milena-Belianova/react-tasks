@@ -1,8 +1,9 @@
 import { products } from "../../data/products";
 import { Product } from "./product";
+import styles from './productsContainer.module.scss';
 
 export const ProductsContainer = () => (
-  <div className="products__container">
+  <div className={styles.products__container}>
     {products.map(
       ({
         imgUrl,

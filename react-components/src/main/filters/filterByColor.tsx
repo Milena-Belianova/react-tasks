@@ -1,29 +1,65 @@
-export const FilterByColor = () => (
-  <div className="filter-by-color">
-    <p className="filter-by-color__text">Color</p>
-    <button
-      className="filter-by-color__button filter-by-color__button_white"
-      data-color="white"
-    ></button>
-    <button
-      className="filter-by-color__button filter-by-color__button_green"
-      data-color="green"
-    ></button>
-    <button
-      className="filter-by-color__button filter-by-color__button_yellow"
-      data-color="yellow"
-    ></button>
-    <button
-      className="filter-by-color__button filter-by-color__button_blue"
-      data-color="blue"
-    ></button>
-    <button
-      className="filter-by-color__button filter-by-color__button_red"
-      data-color="red"
-    ></button>
-    <button
-      className="filter-by-color__button filter-by-color__button_black"
-      data-color="black"
-    ></button>
-  </div>
-);
+import React, { useState, useCallback } from "react";
+import classNames from "classnames";
+import styles from "./filterByColor.module.scss";
+
+const colors = ["white", "green", "yellow", "blue", "red", "black"];
+
+export const FilterByColor = () => {
+  const [checkedColors, setCheckedColors] = useState<string[]>([]);
+  const toggleColor = useCallback(
+    (color: string) => () =>
+      setCheckedColors(
+        checkedColors.includes(color)
+          ? checkedColors.filter((c: string) => c !== color)
+          : [...checkedColors, color]
+      ),
+    [checkedColors]
+  );
+
+  return (
+    <div className={styles.container}>
+      <p className={styles.text}>Color</p>
+      {colors.map((color) => (
+        <button
+          className={classNames(styles[`button_${color}`], {
+            [styles["button_checked"]]:
+              checkedColors.includes(color),
+          })}
+          data-color={color}
+          onClick={toggleColor(color)}
+        ></button>
+      ))}
+    </div>
+  );
+};
+
+// export class FilterByColorClass extends React.Component {
+//   state: {checkedColors: Array<string>} = { checkedColors: [] };
+
+//   toggleColor = (color: string) => () =>{
+//     const {checkedColors} = this.state;
+//     this.setState({
+//       checkedColors: checkedColors.includes(color)
+//         ? checkedColors.filter((c: string) => c !== color)
+//         : [...checkedColors, color],
+//     });
+//   }
+
+//   render() {
+//     return (
+//       <div className={styles.container}>
+//         <p className={styles.text}>Color</p>
+//         {colors.map((color) => (
+//           <button
+//             className={classNames(styles[`button_${color}`], {
+//               [styles["filter-by-color__button_checked"]]:
+//                 this.state.checkedColors.includes(color),
+//             })}
+//             data-color={color}
+//             onClick={this.toggleColor(color)}
+//           ></button>
+//         ))}
+//       </div>
+//     );
+//   }
+// }

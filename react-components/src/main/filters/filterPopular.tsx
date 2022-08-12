@@ -1,8 +1,10 @@
+import styles from './filterPopular.module.scss';
+
 export const FilterPopular = () => (
-  <div className="filter-popular">
-    <label htmlFor="popular" className="filters-popular__checkbox-label">
+  <div className={styles.container}>
+    <label htmlFor="popular" className={styles["checkbox-label"]}>
       Popular
     </label>
-    <input name="popular" id="popular" className="filters-popular__checkbox" />
+    <input type= "checkbox" name="popular" id="popular" />
   </div>
 );

@@ -1,0 +1,12 @@
+.main {
+  min-height: 85vh;
+  background-color: rgb(228, 231, 235, 0.8);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  @media (max-width: 600px) {
+    padding: 0.5rem;
+  }
+}

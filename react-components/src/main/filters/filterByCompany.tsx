@@ -1,17 +1,35 @@
-export const FilterByCompany = () => (
-  <div className="filter-by-company">
-    <p className="filter-by-company__text">Company</p>
-    <button className="filter-by-company__button filter-by-company__button_cake">
-      CAKE
-    </button>
-    <button className="filter-by-company__button filter-by-company__button_segway">
-      SEGWAY
-    </button>
-    <button className="filter-by-company__button filter-by-company__button_sur-ron">
-      SUR-RON
-    </button>
-    <button className="filter-by-company__button filter-by-company__button_talaria">
-      TALARIA
-    </button>
-  </div>
-);
+import classNames from "classnames";
+import { useCallback, useState } from "react";
+import styles from "./filterByCompany.module.scss";
+
+const companies = ["CAKE", "SEGWAY", "SUR-RON", "TALARIA"];
+
+export const FilterByCompany = () => {
+  const [checkedCompanies, setCheckedCompanies] = useState<string[]>([]);
+
+  const toggleCompany = useCallback(
+    (company: string) => () =>
+      setCheckedCompanies(
+        checkedCompanies.includes(company)
+          ? checkedCompanies.filter((c: string) => c !== company)
+          : [...checkedCompanies, company]
+      ),
+      [checkedCompanies]
+  );
+
+  return (
+    <div className={styles.container}>
+      <p className={styles.text}>Company</p>
+
+      {companies.map((company) => (
+        <button
+          className={classNames(styles.button, {
+            [styles.button_checked]: checkedCompanies.includes(company),
+          })}
+          data-company={company}
+          onClick={toggleCompany(company)}
+        >{company}</button>
+      ))}
+    </div>
+  );
+};

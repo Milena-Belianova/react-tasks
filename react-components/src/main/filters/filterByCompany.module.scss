@@ -1,0 +1,23 @@
+@import '../../index.scss';
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  user-select: none;
+  flex-wrap: wrap;
+
+  .text {
+    margin-right: 0.6rem;
+  }
+
+  .button {
+    color: #3e3e3f;
+  }
+
+  .button_checked {
+    background-color: rgb(247, 215, 157);
+    border: 1px solid $orange;
+    margin: 1px;
+  }
+}

@@ -1,6 +1,5 @@
-import styles from './header.scss';
+import styles from './header.module.scss';
 
-console.log({styles});
 export type HeaderProps = {cartCount: number, showCartCount: boolean};
 
 export const Header = ({cartCount, showCartCount}: HeaderProps) => (

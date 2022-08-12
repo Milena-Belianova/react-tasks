@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  .checkbox-label {
+    user-select: none;
+  }
+}
