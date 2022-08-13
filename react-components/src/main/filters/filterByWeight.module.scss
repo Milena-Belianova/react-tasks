@@ -1,0 +1,22 @@
+@import "../../index.scss";
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  user-select: none;
+
+  .text {
+    margin-right: 0.3rem;
+  }
+
+  .button {
+    color: #3e3e3f;
+  }
+
+  .button_checked {
+    background-color: rgb(247, 215, 157);
+    border: 1px solid $orange;
+    margin: 1px;
+  }
+}

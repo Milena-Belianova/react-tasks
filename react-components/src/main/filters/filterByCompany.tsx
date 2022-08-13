@@ -26,7 +26,6 @@ export const FilterByCompany = () => {
           className={classNames(styles.button, {
             [styles.button_checked]: checkedCompanies.includes(company),
           })}
-          data-company={company}
           onClick={toggleCompany(company)}
         >{company}</button>
       ))}

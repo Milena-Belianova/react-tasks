@@ -25,7 +25,6 @@ export const FilterByColor = () => {
             [styles["button_checked"]]:
               checkedColors.includes(color),
           })}
-          data-color={color}
           onClick={toggleColor(color)}
         ></button>
       ))}

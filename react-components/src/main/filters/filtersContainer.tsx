@@ -1,5 +1,5 @@
 import { FiltersByValue } from "./filtersByValue";
-import { SearchReset } from "./searchReset";
+import { SearchReset } from "./searchResetContainer";
 import styles from './filtersContainer.module.scss';
 
 export const FiltersContainer = () => (

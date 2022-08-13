@@ -1,0 +1,53 @@
+@import "../../index.scss";
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  @media (max-width: 800px) {
+    flex-direction: row;
+  }
+
+  @media (max-width: 600px) {
+    gap: 0.7rem;
+  }
+
+  .button {
+    width: 70%;
+    border: 1px solid $orange;
+    border-radius: 0;
+    text-transform: uppercase;
+    cursor: pointer;
+    transform: translateZ(0);
+    transition: color 0.3s ease;
+    letter-spacing: 0.0625rem;
+    transition: transform 0.3s ease-out;
+    white-space: nowrap;
+    padding: 0.7rem 0.9rem;
+    font-size: 0.7rem;
+
+    &:hover {
+      &::before {
+        transform: scaleX(1);
+      }
+    }
+    &:active {
+      transform: scale(0.95);
+      background-color: rgb(247, 215, 157);
+    }
+    &::before {
+      position: absolute;
+      content: '';
+      z-index: -1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgb(247, 215, 157);
+      transform: scaleX(0);
+      transform-origin: 0 50%;
+      transition: transform 0.3s ease-out;
+    }
+  }
+}

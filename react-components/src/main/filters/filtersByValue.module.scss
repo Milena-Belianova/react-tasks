@@ -1,29 +1,6 @@
-@import '../../index.scss';
-
 .container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
-
-  .filter-by-weight {
-    display: flex;
-    align-items: center;
-    gap: 0.7rem;
-    user-select: none;
-
-    .filter-by-weight__text {
-      margin-right: 0.3rem;
-    }
-
-    .filter-by-weight__button {
-      color: #3e3e3f;
-    }
-
-    .filter-by-weight__button_checked {
-      background-color: rgb(247, 215, 157);
-      border: 1px solid $orange;
-      margin: 1px;
-    }
-  }
 }
